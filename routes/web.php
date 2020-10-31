@@ -1,6 +1,8 @@
 <?php
 
-/** @var \Laravel\Lumen\Routing\Router $router */
+use Laravel\Lumen\Routing\Router;
+
+/** @var Router $router */
 
 /*
 |--------------------------------------------------------------------------
@@ -16,3 +18,5 @@
 $router->get('/', function () use ($router) {
     return $router->app->version();
 });
+
+$router->get('/products', 'ProductController@index');
